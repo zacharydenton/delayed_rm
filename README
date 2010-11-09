@@ -1,0 +1,21 @@
+usage: delayed_rm.py [-h] [-d X] [-v] [-f] [-r] [-t] [--version] source backup
+
+Remove files from a backup directory X days after deletion from the source
+directory.
+
+positional arguments:
+  source               the source directory
+  backup               the backup directory
+
+optional arguments:
+  -h, --help           show this help message and exit
+  -d X, --delay X      delay (in days) after which to delete extraneous files
+  -v, --verbose        increase verbosity
+  -f, --force-recheck  rechecks all files in the deletion index to ensure that
+                       they should be deleted. useful if files were moved from
+                       the source directory and subsequently moved back to the
+                       source directory.
+  -r, --recursive      recursive mode
+  -t, --test           test mode - does not erase any files, but shows which
+                       files would be erased
+  --version
